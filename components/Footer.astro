@@ -1,0 +1,267 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-logo-section">
+        <img
+          src="/logo/USRad-Logo-final.png"
+          alt="USRad Logo"
+          class="footer-logo"
+        />
+        <p class="footer-tagline">Medical Imaging Done Right</p>
+      </div>
+
+      <div class="footer-columns">
+        <!-- First Column: About USRad -->
+        <div class="footer-column">
+          <h3 class="footer-heading">About USRad</h3>
+          <ul class="footer-links">
+            <li><a href="/about" class="footer-link">About Us</a></li>
+            <li><a href="/founder" class="footer-link">Meet the Founder</a></li>
+            <li><a href="/news" class="footer-link">News</a></li>
+            <li><a href="/careers" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Second Column: For Patients -->
+        <div class="footer-column">
+          <h3 class="footer-heading">For Patients</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="/our-approach" class="footer-link">Our Approach</a>
+            </li>
+            <li><a href="/locations" class="footer-link">Find a Center</a></li>
+            <li><a href="/faq" class="footer-link">Patient FAQs</a></li>
+            <li><a href="/contact" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Third Column: For Imaging Centers -->
+        <div class="footer-column">
+          <h3 class="footer-heading">For Imaging Centers</h3>
+          <p class="footer-text">
+            Join our nationwide network of premium imaging centers and optimize
+            your facility utilization.
+          </p>
+          <a href="/partner" class="footer-button">Learn About Joining</a>
+        </div>
+
+        <!-- Fourth Column: Partner Resources -->
+        <div class="footer-column">
+          <h3 class="footer-heading">Partner Resources</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="/partner/experience" class="footer-link"
+                >Our Experience</a
+              >
+            </li>
+            <li>
+              <a href="/partner/model" class="footer-link">Partnership Model</a>
+            </li>
+            <li>
+              <a href="/partner/implementation" class="footer-link"
+                >Implementation Process</a
+              >
+            </li>
+            <li>
+              <a href="/partner/benefits" class="footer-link"
+                >Partner Benefits</a
+              >
+            </li>
+            <li><a href="/partner/faq" class="footer-link">Partner FAQs</a></li>
+            <li>
+              <a href="/partner/schedule" class="footer-link"
+                >Schedule a Consultation</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright">
+        &copy; {currentYear} USRad. All rights reserved.
+      </div>
+      <div class="legal-links">
+        <a href="/privacy" class="footer-link">Privacy Policy</a>
+        <a href="/terms" class="footer-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Footer Styles */
+  .footer {
+    font-family: "Manrope", sans-serif;
+  }
+
+  .footer-main {
+    background-color: #003087; /* Deep blue background */
+    color: white;
+    padding: 4rem 0;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-logo-section {
+    margin-bottom: 3rem;
+  }
+
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1); /* Makes the logo white on dark background */
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .footer-column {
+  }
+
+  .footer-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  /* Fixed trailing line effect with ::before */
+  .footer-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cc9933;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer-link:hover {
+    color: #cc9933; /* Gold hover color */
+    transform: translateY(-2px);
+  }
+
+  .footer-link:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .footer-text {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .footer-button {
+    display: inline-block;
+    padding: 0.625rem 1.5rem;
+    background-color: #cc9933;
+    color: #003087;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .footer-button:hover {
+    background-color: rgba(204, 153, 51, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .footer-bottom {
+    background-color: #002470; /* Slightly darker blue */
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .footer-columns {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .footer-bottom .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .legal-links {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-main {
+      padding: 3rem 0;
+    }
+
+    .footer-columns {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>
