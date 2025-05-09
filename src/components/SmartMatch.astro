@@ -1,0 +1,115 @@
+---
+import FadeIn from "./FadeIn.astro";
+---
+
+<section class="bg-slate-50 py-20 px-6 font-manrope">
+  <!-- Emotional Hook -->
+  <FadeIn effect="fade" delay={0}>
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <h2
+        class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight"
+      >
+        Tired of Confusing MRI Choices and Costs?
+      </h2>
+
+      <p class="text-lg sm:text-xl text-slate-600 mt-6">
+        You’re told you need an MRI. But where do you go? What’s the real cost?
+        Will the scan be good enough?
+      </p>
+
+      <ul
+        class="mt-6 space-y-2 text-slate-600 text-md text-left sm:text-center sm:max-w-xl sm:mx-auto"
+      >
+        <li>
+          • Searching online. Calling random centers. Hoping for the best.
+        </li>
+        <li>• Insurance games. Unknown prices. Delayed results.</li>
+        <li>• It shouldn’t be this hard to get care.</li>
+      </ul>
+
+      <p class="text-lg sm:text-xl text-slate-700 font-medium mt-6">
+        <strong>Clarity changes that.</strong> Our SmartMatch<sup>™</sup> system
+        connects you with trusted imaging centers — matched to your diagnosis, location,
+        and preferences.
+      </p>
+    </div>
+  </FadeIn>
+
+  <!-- How It Works -->
+  <FadeIn effect="zoom" delay={200}>
+    <div class="max-w-4xl mx-auto text-center mt-16 mb-20">
+      <h3 class="text-3xl sm:text-4xl font-bold text-blue-900 tracking-tight">
+        How Clarity Works — Simple, Seamless, Smart
+      </h3>
+      <div class="mt-4 w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
+      <p class="text-lg sm:text-xl text-slate-600 mt-6 leading-relaxed">
+        From the moment you're told you need an MRI, we handle the complexity.
+        No more phone tag, insurance surprises, or guesswork. Just the right
+        scan — at the right center — at the right price.
+      </p>
+    </div>
+  </FadeIn>
+
+  <!-- Step Cards -->
+  <div
+    class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-4 sm:px-0"
+  >
+    <FadeIn effect="slide-up" delay={300}>
+      <div
+        class="flex flex-col justify-between h-full min-h-[320px] bg-white p-6 rounded-xl border-2 border-[#e6c378] shadow-md hover:shadow-lg transition-all text-left"
+      >
+        <div class="text-4xl mb-4">🩺</div>
+        <h4 class="text-lg font-bold text-slate-800 mb-2">
+          Tell Us What You Need
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Pick your scan — like a brain, knee, or spine MRI. No referral needed.
+        </p>
+      </div>
+    </FadeIn>
+
+    <FadeIn effect="slide-up" delay={400}>
+      <div
+        class="flex flex-col justify-between h-full min-h-[320px] bg-white p-6 rounded-xl border-2 border-[#e6c378] shadow-md hover:shadow-lg transition-all text-left"
+      >
+        <div class="text-4xl mb-4">📍</div>
+        <h4 class="text-lg font-bold text-slate-800 mb-2">
+          Get Matched Instantly
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Our SmartMatch™ engine pairs you with the best center based on your
+          needs.
+        </p>
+      </div>
+    </FadeIn>
+
+    <FadeIn effect="slide-up" delay={500}>
+      <div
+        class="flex flex-col justify-between h-full min-h-[320px] bg-white p-6 rounded-xl border-2 border-[#e6c378] shadow-md hover:shadow-lg transition-all text-left"
+      >
+        <div class="text-4xl mb-4">💳</div>
+        <h4 class="text-lg font-bold text-slate-800 mb-2">
+          Know Your Price Upfront
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          See transparent pricing. Pay online to reserve. No surprises, ever.
+        </p>
+      </div>
+    </FadeIn>
+
+    <FadeIn effect="slide-up" delay={600}>
+      <div
+        class="flex flex-col justify-between h-full min-h-[320px] bg-white p-6 rounded-xl border-2 border-[#e6c378] shadow-md hover:shadow-lg transition-all text-left"
+      >
+        <div class="text-4xl mb-4">📄</div>
+        <h4 class="text-lg font-bold text-slate-800 mb-2">
+          Receive Fast Results
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Board-certified radiologists read your scan. Results come securely,
+          quickly.
+        </p>
+      </div>
+    </FadeIn>
+  </div>
+</section>

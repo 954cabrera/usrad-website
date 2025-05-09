@@ -1,0 +1,78 @@
+---
+// src/components/UtilityHeader.astro
+---
+
+<div class="utility-header">
+  <div class="utility-container">
+    <a href="/partner" class="utility-link">
+      For Imaging Centers
+      <svg
+        class="utility-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  .utility-header {
+    background-color: #f8f2e1;
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 60; /* Higher than navbar z-index */
+  }
+
+  .utility-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .utility-link {
+    font-size: 0.875rem;
+    color: #003087;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+
+  .utility-link:hover {
+    color: #cc9933;
+  }
+
+  .utility-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 0.25rem;
+  }
+
+  /* Adjust main navbar positioning to account for utility header */
+  :global(.navbar) {
+    top: 2rem; /* Height of utility header */
+  }
+
+  :global(.main-content) {
+    padding-top: 140px; /* Adjust based on combined height of navbar + utility header */
+  }
+
+  @media (max-width: 768px) {
+    .utility-container {
+      padding: 0 1rem;
+    }
+  }
+</style>

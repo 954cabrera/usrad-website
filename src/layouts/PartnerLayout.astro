@@ -1,0 +1,26 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ChatbotToggle from "../components/ChatbotToggle.astro";
+import "../styles/global.css";
+import AOSInit from '../components/AOSInit.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><slot name="title">USRad Partners</slot></title>
+    <link rel="icon" href="/favicon.ico" />
+    <AOSInit />
+  </head>
+
+  <body class="bg-white text-gray-800">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <ChatbotToggle chatbotLabel="💬 Let's Talk" />
+  </body>
+</html>
